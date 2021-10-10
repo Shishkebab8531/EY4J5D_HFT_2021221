@@ -85,23 +85,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hallgato\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Karesz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\EY4J5D_HFT_20211221.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\EY4J5D_HFT_20211221.Test.csproj",
       "projectName": "EY4J5D_HFT_20211221.Test",
-      "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\EY4J5D_HFT_20211221.Test.csproj",
-      "packagesPath": "C:\\Users\\hallgato\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\obj\\",
+      "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\EY4J5D_HFT_20211221.Test.csproj",
+      "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hallgato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -115,14 +111,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Logic\\EY4J5D_HFT_20211221.Logic.csproj": {
-              "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Logic\\EY4J5D_HFT_20211221.Logic.csproj"
+            "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Logic\\EY4J5D_HFT_20211221.Logic.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Logic\\EY4J5D_HFT_20211221.Logic.csproj"
             },
-            "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
-              "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj"
+            "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj"
             },
-            "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Repository\\EY4J5D_HFT_20211221.Repository.csproj": {
-              "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Repository\\EY4J5D_HFT_20211221.Repository.csproj"
+            "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Repository\\EY4J5D_HFT_20211221.Repository.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Repository\\EY4J5D_HFT_20211221.Repository.csproj"
             }
           }
         }

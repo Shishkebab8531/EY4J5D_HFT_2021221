@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {}
+    "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
+    "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj",
         "projectName": "EY4J5D_HFT_20211221.Models",
-        "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj",
-        "packagesPath": "C:\\Users\\hallgato\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\obj\\",
+        "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj",
+        "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hallgato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -27,23 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hallgato\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Karesz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\EY4J5D_HFT_20211221.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\EY4J5D_HFT_20211221.Data.csproj",
       "projectName": "EY4J5D_HFT_20211221.Data",
-      "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\EY4J5D_HFT_20211221.Data.csproj",
-      "packagesPath": "C:\\Users\\hallgato\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\obj\\",
+      "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\EY4J5D_HFT_20211221.Data.csproj",
+      "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hallgato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -57,8 +53,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
-              "projectPath": "C:\\Users\\hallgato\\Downloads\\PortableGit\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj"
+            "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_20211221\\EY4J5D_HFT_20211221.Models\\EY4J5D_HFT_20211221.Models.csproj"
             }
           }
         }
