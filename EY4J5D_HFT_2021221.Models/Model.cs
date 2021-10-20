@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EY4J5D_HFT_2021221.Models
 {
     [Table("Car")]
-    public class Car_Model
+    public class Model
     {
         [NotMapped]
         public string Model_Name { get; set; }
@@ -16,6 +16,6 @@ namespace EY4J5D_HFT_2021221.Models
         public int Brand_Id { get; set; }
         [NotMapped]
         public virtual ICollection<Purchase> Purchases { get; set; }
-        public virtual Car_Brand Brand { get; set; }
+        public virtual Brand Brand { get; set; }
     }
 }

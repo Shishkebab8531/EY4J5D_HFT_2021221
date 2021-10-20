@@ -17,6 +17,6 @@ namespace EY4J5D_HFT_2021221.Models
         [NotMapped]
         public int Price { get; set; }
         [NotMapped]
-        public virtual Car_Model Model { get; set; }
+        public virtual Model Model { get; set; }
     }
 }

@@ -13,13 +13,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EY4J5D_HFT_2021221.Data\EY4J5D_HFT_2021221.Data.csproj" />
     <ProjectReference Include="..\EY4J5D_HFT_2021221.Logic\EY4J5D_HFT_2021221.Logic.csproj" />
     <ProjectReference Include="..\EY4J5D_HFT_2021221.Models\EY4J5D_HFT_2021221.Models.csproj" />
-    <ProjectReference Include="..\EY4J5D_HFT_2021221.Repository\EY4J5D_HFT_2021221.Repository.csproj" />
   </ItemGroup>
 
 </Project>

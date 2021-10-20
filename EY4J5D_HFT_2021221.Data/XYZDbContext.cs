@@ -7,8 +7,8 @@ namespace EY4J5D_HFT_2021221.Data
     public class XYZDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CarDb.mdf;Integrated Security=True
-        public virtual DbSet<Car_Model> Cars { get; set; }
-        public virtual DbSet<Car_Brand> Brands { get; set; }
+        public virtual DbSet<Model> Cars { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Purchase> Purchases { get; set; }
         public XYZDbContext()
         {
@@ -23,20 +23,20 @@ namespace EY4J5D_HFT_2021221.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Car_Model>(entity => entity.HasOne(model => model.Brand).WithMany(brand => brand.Models).HasForeignKey(model => model.Brand_Id).OnDelete(DeleteBehavior.ClientSetNull));
-            modelBuilder.Entity<Car_Model>(entity => entity.HasMany(model => model.Purchases).WithOne(purchase => purchase.Model).HasForeignKey(purchase => purchase.Model).OnDelete(DeleteBehavior.Cascade));
+            modelBuilder.Entity<Model>(entity => entity.HasOne(model => model.Brand).WithMany(brand => brand.Models).HasForeignKey(model => model.Brand_Id).OnDelete(DeleteBehavior.ClientSetNull));
+            modelBuilder.Entity<Model>(entity => entity.HasMany(model => model.Purchases).WithOne(purchase => purchase.Model).HasForeignKey(purchase => purchase.Model).OnDelete(DeleteBehavior.Cascade));
 
             // -------------------------------------------------------------------------------------------------------
 
-            Car_Model c0 = new Car_Model() { Brand_Id = 1, Id = 1, Model_Name = "Multipla" };
-            Car_Model c1 = new Car_Model() { Brand_Id = 2, Id = 2, Model_Name = "Civic" };
-            Car_Model c2 = new Car_Model() { Brand_Id = 3, Id = 3, Model_Name = "Slingshot" };
+            Model c0 = new Model() { Brand_Id = 1, Id = 1, Model_Name = "Multipla" };
+            Model c1 = new Model() { Brand_Id = 2, Id = 2, Model_Name = "Civic" };
+            Model c2 = new Model() { Brand_Id = 3, Id = 3, Model_Name = "Slingshot" };
 
             // -------------------------------------------------------------------------------------------------------
 
-            Car_Brand b0 = new Car_Brand() { Id = 1, BrandName = "Fiat" };
-            Car_Brand b1 = new Car_Brand() { Id = 2, BrandName = "Honda" };
-            Car_Brand b2 = new Car_Brand() { Id = 3, BrandName = "Polaris" };
+            Brand b0 = new Brand() { Id = 1, BrandName = "Fiat" };
+            Brand b1 = new Brand() { Id = 2, BrandName = "Honda" };
+            Brand b2 = new Brand() { Id = 3, BrandName = "Polaris" };
 
             // -------------------------------------------------------------------------------------------------------
 
@@ -55,8 +55,8 @@ namespace EY4J5D_HFT_2021221.Data
 
             //-------------------------------------------------------------------------------------------------------
 
-            modelBuilder.Entity<Car_Brand>().HasData(b0, b1, b2);
-            modelBuilder.Entity<Car_Model>().HasData(c0, c1, c2);
+            modelBuilder.Entity<Brand>().HasData(b0, b1, b2);
+            modelBuilder.Entity<Model>().HasData(c0, c1, c2);
             modelBuilder.Entity<Purchase>().HasData(p0, p1, p2);
         }
     }
