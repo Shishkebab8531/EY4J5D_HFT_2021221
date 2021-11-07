@@ -90,5 +90,28 @@ namespace EY4J5D_HFT_20211221.Repository
             throw new NotImplementedException();
         }
     }
-   
+    public class BrandRepository : Repository<Brand>, IRepository<Brand>
+    {
+        public BrandRepository(DbContext ctx) : base(ctx) { }
+
+        public override Brand Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Brand Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Brand ReadOne(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Brand Update(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
