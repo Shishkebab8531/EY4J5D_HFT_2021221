@@ -10,10 +10,10 @@ namespace EY4J5D_HFT_2021221.Repository
     public interface IRepository<T> where T : class
     {
         //CRUD
-        T Create();
+        void Create(T input);
         T ReadOne(int id);
         IQueryable<T> ReadAll();
-        T Update(int id);
-        T Delete(int id);
+        void Update(T updated);
+        void Delete(int id);
     }
 }

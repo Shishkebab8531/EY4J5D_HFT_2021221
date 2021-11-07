@@ -19,9 +19,9 @@ namespace EY4J5D_HFT_20211221.Repository
             this.ctx = ctx;
         }
 
-        public abstract T Create();
-        public abstract T Delete(int id);
-        public abstract T Update(int id);
+        public abstract void Create(T input);
+        public abstract void Delete(int id);
+        public abstract void Update(T updated);
         public abstract T ReadOne(int id);
         public IQueryable<T> ReadAll()
         {
@@ -46,13 +46,13 @@ namespace EY4J5D_HFT_20211221.Repository
             // Unit of Work pattern ???
             ctx.SaveChanges();
         }
-
-        public override Purchase Create()
+        //CRUD
+        public override void Create(Purchase input)
         {
             throw new NotImplementedException();
         }
 
-        public override Purchase Delete(int id)
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -62,20 +62,22 @@ namespace EY4J5D_HFT_20211221.Repository
             throw new NotImplementedException();
         }
 
-        public override Purchase Update(int id)
+        public override void Update(Purchase updated)
         {
             throw new NotImplementedException();
         }
+        
     }
     public class ModelRepository : Repository<Model>, IRepository<Model>
     {
         public ModelRepository(DbContext ctx) : base(ctx) { }
-        public override Model Create()
+        //CRUD
+        public override void Create(Model input)
         {
             throw new NotImplementedException();
         }
 
-        public override Model Delete(int id)
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -85,7 +87,7 @@ namespace EY4J5D_HFT_20211221.Repository
             throw new NotImplementedException();
         }
 
-        public override Model Update(int id)
+        public override void Update(Model updated)
         {
             throw new NotImplementedException();
         }
@@ -93,13 +95,13 @@ namespace EY4J5D_HFT_20211221.Repository
     public class BrandRepository : Repository<Brand>, IRepository<Brand>
     {
         public BrandRepository(DbContext ctx) : base(ctx) { }
-
-        public override Brand Create()
+        //CRUD
+        public override void Create(Brand input)
         {
             throw new NotImplementedException();
         }
 
-        public override Brand Delete(int id)
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -109,7 +111,7 @@ namespace EY4J5D_HFT_20211221.Repository
             throw new NotImplementedException();
         }
 
-        public override Brand Update(int id)
+        public override void Update(Brand updated)
         {
             throw new NotImplementedException();
         }
