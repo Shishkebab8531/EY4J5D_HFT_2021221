@@ -49,7 +49,8 @@ namespace EY4J5D_HFT_20211221.Repository
         //CRUD
         public override void Create(Purchase input)
         {
-            throw new NotImplementedException();
+            ctx.Add(input);
+            ctx.SaveChanges();
         }
 
         public override void Delete(int id)
