@@ -55,7 +55,8 @@ namespace EY4J5D_HFT_20211221.Repository
 
         public override void Delete(int id)
         {
-            throw new NotImplementedException();
+            ctx.Remove(ReadOne(id));
+            ctx.SaveChanges();
         }
 
         public override Purchase ReadOne(int id)
