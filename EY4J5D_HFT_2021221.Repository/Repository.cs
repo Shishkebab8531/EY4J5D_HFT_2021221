@@ -107,18 +107,17 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Add(input);
             ctx.SaveChanges();
         }
-
-        public override void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public override Brand ReadOne(int id)
         {
-            throw new NotImplementedException();
+            return ReadAll().SingleOrDefault(x => x.Id == id);
         }
 
         public override void Update(Brand updated)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
