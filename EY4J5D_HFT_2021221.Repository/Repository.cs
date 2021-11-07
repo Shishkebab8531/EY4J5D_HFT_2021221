@@ -52,18 +52,10 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Add(input);
             ctx.SaveChanges();
         }
-
-        public override void Delete(int id)
-        {
-            ctx.Remove(ReadOne(id));
-            ctx.SaveChanges();
-        }
-
         public override Purchase ReadOne(int id)
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
-
         public override void Update(Purchase updated)
         {
             var oldPurchase = ReadOne(updated.Id);
@@ -72,7 +64,11 @@ namespace EY4J5D_HFT_20211221.Repository
             oldPurchase.Price = updated.Price;
             ctx.SaveChanges();
         }
-        
+        public override void Delete(int id)
+        {
+            ctx.Remove(ReadOne(id));
+            ctx.SaveChanges();
+        }  
     }
     public class ModelRepository : Repository<Model>, IRepository<Model>
     {
@@ -80,7 +76,8 @@ namespace EY4J5D_HFT_20211221.Repository
         //CRUD
         public override void Create(Model input)
         {
-            throw new NotImplementedException();
+            ctx.Add(input);
+            ctx.SaveChanges();
         }
 
         public override void Delete(int id)
