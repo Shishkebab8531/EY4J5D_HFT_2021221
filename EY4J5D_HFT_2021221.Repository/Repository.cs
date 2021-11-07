@@ -83,12 +83,16 @@ namespace EY4J5D_HFT_20211221.Repository
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
-        public override void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void Update(Model updated)
+        {
+            var oldPurchase = ReadOne(updated.Id);
+            oldPurchase.Brand = updated.Brand;
+            oldPurchase.Brand_Id = updated.Brand_Id;
+            oldPurchase.Model_Name = updated.Model_Name;
+            oldPurchase.Purchases = updated.Purchases;
+            ctx.SaveChanges();
+        }
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
