@@ -79,13 +79,11 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Add(input);
             ctx.SaveChanges();
         }
-
-        public override void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public override Model ReadOne(int id)
+        {
+            return ReadAll().SingleOrDefault(x => x.Id == id);
+        }
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
