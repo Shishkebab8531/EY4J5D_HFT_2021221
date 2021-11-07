@@ -85,11 +85,11 @@ namespace EY4J5D_HFT_20211221.Repository
         }
         public override void Update(Model updated)
         {
-            var oldPurchase = ReadOne(updated.Id);
-            oldPurchase.Brand = updated.Brand;
-            oldPurchase.Brand_Id = updated.Brand_Id;
-            oldPurchase.Model_Name = updated.Model_Name;
-            oldPurchase.Purchases = updated.Purchases;
+            var oldModel = ReadOne(updated.Id);
+            oldModel.Brand = updated.Brand;
+            oldModel.Brand_Id = updated.Brand_Id;
+            oldModel.Model_Name = updated.Model_Name;
+            oldModel.Purchases = updated.Purchases;
             ctx.SaveChanges();
         }
         public override void Delete(int id)
@@ -114,7 +114,11 @@ namespace EY4J5D_HFT_20211221.Repository
 
         public override void Update(Brand updated)
         {
-            throw new NotImplementedException();
+           var oldBrand = ReadOne(updated.Id);
+            oldBrand.BrandName = updated.BrandName;
+            oldBrand.Id = updated.Id;
+            oldBrand.Models = updated.Models;
+            ctx.SaveChanges();
         }
 
         public override void Delete(int id)
