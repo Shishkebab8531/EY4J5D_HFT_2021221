@@ -61,7 +61,7 @@ namespace EY4J5D_HFT_20211221.Repository
 
         public override Purchase ReadOne(int id)
         {
-            throw new NotImplementedException();
+            return ReadAll().SingleOrDefault(x => x.Id == id);
         }
 
         public override void Update(Purchase updated)
