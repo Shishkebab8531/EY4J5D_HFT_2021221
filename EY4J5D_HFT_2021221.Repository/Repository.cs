@@ -66,7 +66,11 @@ namespace EY4J5D_HFT_20211221.Repository
 
         public override void Update(Purchase updated)
         {
-            throw new NotImplementedException();
+            var oldPurchase = ReadOne(updated.Id);
+            oldPurchase.Car_Id = updated.Car_Id;
+            oldPurchase.Model = updated.Model;
+            oldPurchase.Price = updated.Price;
+            ctx.SaveChanges();
         }
         
     }
