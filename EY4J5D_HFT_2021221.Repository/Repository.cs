@@ -67,4 +67,28 @@ namespace EY4J5D_HFT_20211221.Repository
             throw new NotImplementedException();
         }
     }
+    public class ModelRepository : Repository<Model>, IRepository<Model>
+    {
+        public ModelRepository(DbContext ctx) : base(ctx) { }
+        public override Model Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Model Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Model ReadOne(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Model Update(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+   
 }
