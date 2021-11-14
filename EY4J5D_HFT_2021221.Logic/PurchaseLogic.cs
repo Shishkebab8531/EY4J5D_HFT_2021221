@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EY4J5D_HFT_2021221.Models;
+using EY4J5D_HFT_2021221.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +10,37 @@ namespace EY4J5D_HFT_2021221.Logic
 {
     class PurchaseLogic : IPurchaseLogic
     {
-        public void Create(PurchaseLogic newModel)
+        IRepository<Purchase> purchaseRepo;
+        //ctor
+        public PurchaseLogic(IRepository<Purchase> purchaseRepo)
         {
-            throw new NotImplementedException();
+            this.purchaseRepo = purchaseRepo;
+        }
+        //CRUD
+        public void Create(Purchase newModel)
+        {
+            purchaseRepo.Create(newModel);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            purchaseRepo.Delete(id);
         }
 
-        public PurchaseLogic Read(int id)
+        public Purchase Read(int id)
         {
-            throw new NotImplementedException();
+            return purchaseRepo.ReadOne(id);
         }
 
-        public IEnumerable<PurchaseLogic> ReadAll()
+        public IEnumerable<Purchase> ReadAll()
         {
-            throw new NotImplementedException();
+            return purchaseRepo.ReadAll();
         }
 
-        public void Update(PurchaseLogic updated)
+        public void Update(Purchase updated)
         {
-            throw new NotImplementedException();
+            purchaseRepo.Update(updated);
         }
+        //Non-CRUD
     }
 }
