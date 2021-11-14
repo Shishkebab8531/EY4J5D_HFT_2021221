@@ -11,7 +11,7 @@ namespace EY4J5D_HFT_2021221.Repository
     {
         //CRUD
         void Create(T input);
-        T ReadOne(int id);
+        T Read(int id);
         IQueryable<T> ReadAll();
         void Update(T updated);
         void Delete(int id);

@@ -1,10 +1,7 @@
-﻿using EY4J5D_HFT_2021221.Models;
+﻿using System;
+using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
@@ -29,7 +26,7 @@ namespace EY4J5D_HFT_2021221.Logic
 
         public Purchase Read(int id)
         {
-            return purchaseRepo.ReadOne(id);
+            return purchaseRepo.Read(id);
         }
 
         public IEnumerable<Purchase> ReadAll()

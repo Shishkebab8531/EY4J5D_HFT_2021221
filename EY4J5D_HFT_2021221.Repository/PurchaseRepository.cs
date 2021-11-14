@@ -12,7 +12,7 @@ namespace EY4J5D_HFT_20211221.Repository
 
         public void ChangePrice(int id, int newPrice)
         {
-            Purchase purchase = ReadOne(id);
+            Purchase purchase = Read(id);
             if (purchase == null)
             {
                 throw new InvalidOperationException(
@@ -29,13 +29,13 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Add(input);
             ctx.SaveChanges();
         }
-        public override Purchase ReadOne(int id)
+        public override Purchase Read(int id)
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
         public override void Update(Purchase updated)
         {
-            var oldPurchase = ReadOne(updated.Id);
+            var oldPurchase = Read(updated.Id);
             oldPurchase.Car_Id = updated.Car_Id;
             oldPurchase.Model = updated.Model;
             oldPurchase.Price = updated.Price;
@@ -43,7 +43,7 @@ namespace EY4J5D_HFT_20211221.Repository
         }
         public override void Delete(int id)
         {
-            ctx.Remove(ReadOne(id));
+            ctx.Remove(Read(id));
             ctx.SaveChanges();
         }  
     }

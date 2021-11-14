@@ -14,13 +14,13 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Add(input);
             ctx.SaveChanges();
         }
-        public override Model ReadOne(int id)
+        public override Model Read(int id)
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
         public override void Update(Model updated)
         {
-            var oldModel = ReadOne(updated.Id);
+            var oldModel = Read(updated.Id);
             oldModel.Brand = updated.Brand;
             oldModel.Brand_Id = updated.Brand_Id;
             oldModel.Model_Name = updated.Model_Name;
@@ -29,7 +29,7 @@ namespace EY4J5D_HFT_20211221.Repository
         }
         public override void Delete(int id)
         {
-            ctx.Remove(ReadOne(id));
+            ctx.Remove(Read(id));
             ctx.SaveChanges();
         }
     }

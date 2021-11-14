@@ -1,11 +1,7 @@
-﻿using EY4J5D_HFT_20211221.Repository;
+﻿using System;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
@@ -30,7 +26,7 @@ namespace EY4J5D_HFT_2021221.Logic
 
         public Brand Read(int id)
         {
-            return brandRepo.ReadOne(id);
+            return brandRepo.Read(id);
         }
 
         public IEnumerable<Brand> ReadAll()

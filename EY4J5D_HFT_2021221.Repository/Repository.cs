@@ -20,7 +20,7 @@ namespace EY4J5D_HFT_20211221.Repository
         public abstract void Create(T input);
         public abstract void Delete(int id);
         public abstract void Update(T updated);
-        public abstract T ReadOne(int id);
+        public abstract T Read(int id);
         public IQueryable<T> ReadAll()
         {
             return ctx.Set<T>();
