@@ -1,4 +1,5 @@
 ﻿using EY4J5D_HFT_2021221.Models;
+using EY4J5D_HFT_2021221.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,37 @@ namespace EY4J5D_HFT_2021221.Logic
 {
     class ModelLogic : IModelLogic
     {
+        IRepository<Model> modelRepo;
+        //ctor
+        public ModelLogic(IRepository<Model> modelRepo)
+        {
+            this.modelRepo = modelRepo;
+        }
+        //CRUD
         public void Create(Model newModel)
         {
-            throw new NotImplementedException();
+            modelRepo.Create(newModel);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            modelRepo.Delete(id);
         }
 
         public Model Read(int id)
         {
-            throw new NotImplementedException();
+            return modelRepo.ReadOne(id);
         }
 
         public IEnumerable<Model> ReadAll()
         {
-            throw new NotImplementedException();
+            return modelRepo.ReadAll();
         }
 
         public void Update(Model updated)
         {
-            throw new NotImplementedException();
+            modelRepo.Update(updated);
         }
+        //Non-CRUD
     }
 }

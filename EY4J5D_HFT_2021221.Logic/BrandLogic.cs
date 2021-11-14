@@ -11,12 +11,13 @@ namespace EY4J5D_HFT_2021221.Logic
 {
     class BrandLogic : IBrandLogic
     {
-        //ADDED constructor
         IRepository<Brand> brandRepo;
+        //ctor
         public BrandLogic(IRepository<Brand> brandRepo)
         {
             this.brandRepo = brandRepo;
         }
+        //CRUD
         public void Create(Brand newModel)
         {
             brandRepo.Create(newModel);
@@ -41,5 +42,6 @@ namespace EY4J5D_HFT_2021221.Logic
         {
             brandRepo.Update(updated);
         }
+        //Non-CRUD
     }
 }
