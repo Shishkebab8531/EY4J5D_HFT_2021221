@@ -3,12 +3,17 @@ using System;
 using System.Linq;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
+using EY4J5D_HFT_2021221.Data;
 
 namespace EY4J5D_HFT_20211221.Repository
 {
-    public class PurchaseRepository : Repository<Purchase>, IRepository<Purchase>
+    public class PurchaseRepository : IRepository<Purchase>
     {
-        public PurchaseRepository(DbContext ctx) : base(ctx) { }
+        CarDbContext ctx;
+        public PurchaseRepository(CarDbContext ctx) 
+        {
+            this.ctx = ctx;
+        }
 
         public void ChangePrice(int id, int newPrice)
         {
@@ -24,16 +29,20 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.SaveChanges();
         }
         //CRUD
-        public override void Create(Purchase input)
+        public void Create(Purchase input)
         {
             ctx.Add(input);
             ctx.SaveChanges();
         }
-        public override Purchase Read(int id)
+        public Purchase Read(int id)
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
-        public override void Update(Purchase updated)
+        public IQueryable<Purchase> ReadAll()
+        {
+            return ctx.Purchases;
+        }
+        public void Update(Purchase updated)
         {
             var oldPurchase = Read(updated.Id);
             oldPurchase.Car_Id = updated.Car_Id;
@@ -41,7 +50,7 @@ namespace EY4J5D_HFT_20211221.Repository
             oldPurchase.Price = updated.Price;
             ctx.SaveChanges();
         }
-        public override void Delete(int id)
+        public void Delete(int id)
         {
             ctx.Remove(Read(id));
             ctx.SaveChanges();

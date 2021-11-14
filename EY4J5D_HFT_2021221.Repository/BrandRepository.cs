@@ -2,24 +2,33 @@
 using System.Linq;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
+using EY4J5D_HFT_2021221.Data;
 
 namespace EY4J5D_HFT_20211221.Repository
 {
-    public class BrandRepository : Repository<Brand>, IRepository<Brand>
+    public class BrandRepository : IRepository<Brand>
     {
-        public BrandRepository(DbContext ctx) : base(ctx) { }
+        CarDbContext ctx;
+        public BrandRepository(CarDbContext ctx)
+        {
+            this.ctx = ctx;
+        }
         //CRUD
-        public override void Create(Brand input)
+        public void Create(Brand input)
         {
             ctx.Add(input);
             ctx.SaveChanges();
         }
-        public override Brand Read(int id)
+        public Brand Read(int id)
         {
             return ReadAll().SingleOrDefault(x => x.Id == id);
         }
+        public IQueryable<Brand> ReadAll()
+        {
+            return ctx.Brands;
+        }
 
-        public override void Update(Brand updated)
+        public void Update(Brand updated)
         {
            var oldBrand = Read(updated.Id);
             oldBrand.BrandName = updated.BrandName;
@@ -28,7 +37,7 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.SaveChanges();
         }
 
-        public override void Delete(int id)
+        public void Delete(int id)
         {
             ctx.Remove(Read(id));
             ctx.SaveChanges();

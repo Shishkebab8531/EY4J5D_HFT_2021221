@@ -4,13 +4,13 @@ using System;
 
 namespace EY4J5D_HFT_2021221.Data
 {
-    public class XYZDbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class CarDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CarDb.mdf;Integrated Security=True
-        public virtual DbSet<Model> Cars { get; set; }
+        public virtual DbSet<Model> Models { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Purchase> Purchases { get; set; }
-        public XYZDbContext()
+        public CarDbContext()
         {
             Database.EnsureCreated();
         }
