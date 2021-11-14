@@ -1,4 +1,6 @@
-﻿using EY4J5D_HFT_2021221.Models;
+﻿using EY4J5D_HFT_20211221.Repository;
+using EY4J5D_HFT_2021221.Models;
+using EY4J5D_HFT_2021221.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +11,35 @@ namespace EY4J5D_HFT_2021221.Logic
 {
     class BrandLogic : IBrandLogic
     {
+        //ADDED constructor
+        IRepository<Brand> brandRepo;
+        public BrandLogic(IRepository<Brand> brandRepo)
+        {
+            this.brandRepo = brandRepo;
+        }
         public void Create(Brand newModel)
         {
-            throw new NotImplementedException();
+            brandRepo.Create(newModel);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            brandRepo.Delete(id);
         }
 
         public Brand Read(int id)
         {
-            throw new NotImplementedException();
+            return brandRepo.ReadOne(id);
         }
 
         public IEnumerable<Brand> ReadAll()
         {
-            throw new NotImplementedException();
+            return brandRepo.ReadAll();
         }
 
         public void Update(Brand updated)
         {
-            throw new NotImplementedException();
+            brandRepo.Update(updated);
         }
     }
 }
