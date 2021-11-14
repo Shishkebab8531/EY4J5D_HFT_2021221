@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
 using System.Collections.Generic;
@@ -39,5 +40,16 @@ namespace EY4J5D_HFT_2021221.Logic
             modelRepo.Update(updated);
         }
         //Non-CRUD
+        public IEnumerable<KeyValuePair<string, int>> BrandsByModels()
+        {
+            return from x in modelRepo.ReadAll()
+                   group x by x.Brand.BrandName into g
+                   select new KeyValuePair<string, int>
+                   (g.Key, g.Count());
+        }
+        public IEnumerable<KeyValuePair<string, int>> BasicBrand()
+        {
+            return (from x in modelRepo.ReadAll() group x by x.Brand.BrandName into g orderby g.Count(*) select new KeyValuePair<string, int>(g.Key, g.Count())).Take(1);
+        }
     }
 }

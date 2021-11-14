@@ -3,6 +3,7 @@ using System.Linq;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
 using EY4J5D_HFT_2021221.Data;
+using System.Collections.Generic;
 
 namespace EY4J5D_HFT_20211221.Repository
 {
@@ -41,5 +42,7 @@ namespace EY4J5D_HFT_20211221.Repository
             ctx.Remove(Read(id));
             ctx.SaveChanges();
         }
+        //Non-CRUD
+        
     }
 }
