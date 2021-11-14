@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using EY4J5D_HFT_2021221.Models;
+using System.Collections.Generic;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    interface IModelLogic
+    public interface IModelLogic
     {
         public void Create(Model newModel);
         public Model Read(int id);

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EY4J5D_HFT_2021221.Models;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    interface IPurchaseLogic
+    public interface IPurchaseLogic
     {
-        public void Create(Purchase newModel);
-        public Purchase Read(int id);
-        public IEnumerable<Purchase> ReadAll();
-        public void Update(Purchase updated);
+        public void Create(PurchaseLogic newModel);
+        public PurchaseLogic Read(int id);
+        public IEnumerable<PurchaseLogic> ReadAll();
+        public void Update(PurchaseLogic updated);
         public void Delete(int id);
     }
 }

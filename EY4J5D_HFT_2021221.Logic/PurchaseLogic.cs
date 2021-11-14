@@ -1,5 +1,4 @@
-﻿using EY4J5D_HFT_2021221.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    class ModelLogic : IModelLogic
+    class PurchaseLogic : IPurchaseLogic
     {
-        public void Create(Model newModel)
+        public void Create(PurchaseLogic newModel)
         {
             throw new NotImplementedException();
         }
@@ -19,17 +18,17 @@ namespace EY4J5D_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public Model Read(int id)
+        public PurchaseLogic Read(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Model> ReadAll()
+        public IEnumerable<PurchaseLogic> ReadAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Model updated)
+        public void Update(PurchaseLogic updated)
         {
             throw new NotImplementedException();
         }

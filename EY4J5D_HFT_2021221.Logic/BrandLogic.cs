@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    class ModelLogic : IModelLogic
+    class BrandLogic : IBrandLogic
     {
-        public void Create(Model newModel)
+        public void Create(Brand newModel)
         {
             throw new NotImplementedException();
         }
@@ -19,17 +19,17 @@ namespace EY4J5D_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public Model Read(int id)
+        public Brand Read(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Model> ReadAll()
+        public IEnumerable<Brand> ReadAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Model updated)
+        public void Update(Brand updated)
         {
             throw new NotImplementedException();
         }
