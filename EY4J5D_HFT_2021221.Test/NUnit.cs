@@ -23,20 +23,26 @@ namespace EY4J5D_HFT_2021221.Test
 
             public void Delete(int id)
             {
-                throw new NotImplementedException();
+                
             }
 
             public Model Read(int id)
             {
-                throw new NotImplementedException();
+                return ReadAll().First(x =>x.Id == id);
             }
 
             public IQueryable<Model> ReadAll()
             {
-                Brand fakeBrand = new Brand()
+                Brand fakeBrand1 = new Brand()
                 {
                     BrandName = "Fiat",
                     Id = 69
+
+                };
+                Brand fakeBrand2 = new Brand()
+                {
+                    BrandName = "Slingshot",
+                    Id = 420
 
                 };
                 return new List<Model>()
@@ -45,22 +51,29 @@ namespace EY4J5D_HFT_2021221.Test
                     {
                         Model_Name = "Multipla",
                         Id = 1,
-                        Brand_Id = fakeBrand.Id,
-                        Brand = fakeBrand
+                        Brand_Id = fakeBrand1.Id,
+                        Brand = fakeBrand1
                     },
                     new Model()
                     {
                         Model_Name = "Punto",
                         Id = 1,
-                        Brand_Id = fakeBrand.Id,
-                        Brand = fakeBrand
+                        Brand_Id = fakeBrand1.Id,
+                        Brand = fakeBrand1
                     },
                     new Model()
                     {
                         Model_Name = "Bravo",
                         Id = 1,
-                        Brand_Id = fakeBrand.Id,
-                        Brand = fakeBrand
+                        Brand_Id = fakeBrand1.Id,
+                        Brand = fakeBrand1
+                    },
+                    new Model()
+                    {
+                        Model_Name = "Polaris",
+                        Id = 4,
+                        Brand_Id = fakeBrand2.Id,
+                        Brand = fakeBrand2
                     }
                 }.AsQueryable();
             }
@@ -69,6 +82,37 @@ namespace EY4J5D_HFT_2021221.Test
             {
                 throw new NotImplementedException();
             }
+        }
+        class FakeBrandRepository : IRepository<Brand>
+        {
+            public void Create(Brand input)
+            {
+
+            }
+
+            public void Delete(int id)
+            {
+
+            }
+
+            public Brand Read(int id)
+            {
+                return ReadAll().First(x => x.Id == id);
+            }
+
+            public IQueryable<Brand> ReadAll()
+            {
+                return null;
+            }
+
+            public void Update(Brand updated)
+            {
+                
+            }
+        }
+        class FakePurchaseRepository
+        {
+
         }
         ModelLogic ml;
         public NUnit()
@@ -91,13 +135,18 @@ namespace EY4J5D_HFT_2021221.Test
             }
         }
         [Test]
-        public void TestSomething()
+        public void TestBrandsByModels()
         {
             var result = ml.BrandsByModels();
             var expected = (new KeyValuePair<string, int>("Fiat", 3));
             Assert.That(result.First, Is.EqualTo(expected));
         }
-
+        public void TestBasicBrand()
+        {
+            var result = ml.BasicBrand();
+            var expected = (new KeyValuePair<string, int>("Slingshot", 1));
+            Assert.That(result.First, Is.EqualTo(expected));
+        }
         //TODO: Test Create Exception handling (e.g. "" throws exception)
         //NOTE: 10 Unit tests are required
     }
