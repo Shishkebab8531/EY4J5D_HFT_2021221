@@ -2,6 +2,7 @@
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
@@ -46,5 +47,9 @@ namespace EY4J5D_HFT_2021221.Logic
             brandRepo.Update(updated);
         }
         //Non-CRUD
+        public IEnumerable<Brand> ShortBrand()
+        {
+            return (from x in brandRepo.ReadAll() where x.BrandName.Length < 4 select x);
+        }
     }
 }

@@ -20,5 +20,6 @@ namespace EY4J5D_HFT_2021221.Models
         [NotMapped]
         public virtual ICollection<Purchase> Purchases { get; set; }
         public virtual Brand Brand { get; set; }
+        
     }
 }

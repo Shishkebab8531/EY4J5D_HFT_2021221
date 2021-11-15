@@ -97,7 +97,7 @@ namespace EY4J5D_HFT_2021221.Test
 
             public Purchase Read(int id)
             {
-                throw new NotImplementedException();
+                return ReadAll().First(x => x.Id == id);
             }
 
             public IQueryable<Purchase> ReadAll()
@@ -110,15 +110,15 @@ namespace EY4J5D_HFT_2021221.Test
                 Model fM4 = new Model() { Brand = fakeBrand2, Brand_Id = fakeBrand2.Id, Model_Name = "Punto" };
                 return new List<Purchase>()
                 {
-                    new Purchase() { Price = 420, Model = fM1, Car_Id = fM1.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 69, Model = fM1, Car_Id = fM1.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 690, Model = fM2, Car_Id = fM2.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 100, Model = fM2, Car_Id = fM2.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 500, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 360, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 360, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 350, Model = fM4, Car_Id = fM4.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
-                    new Purchase() { Price = 169, Model = fM4, Car_Id = fM4.Id, Purchase_Date = Convert.ToDateTime("05/01/1996") },
+                    new Purchase() { Price = 420, Model = fM1, Car_Id = fM1.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 0 },
+                    new Purchase() { Price = 69, Model = fM1, Car_Id = fM1.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 1 },
+                    new Purchase() { Price = 690, Model = fM2, Car_Id = fM2.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 2 },
+                    new Purchase() { Price = 100, Model = fM2, Car_Id = fM2.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 3 },
+                    new Purchase() { Price = 500, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 4 },
+                    new Purchase() { Price = 360, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 5 },
+                    new Purchase() { Price = 360, Model = fM3, Car_Id = fM3.Id, Purchase_Date = Convert.ToDateTime("05/01/2021"), Id = 6 },
+                    new Purchase() { Price = 350, Model = fM4, Car_Id = fM4.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 7 },
+                    new Purchase() { Price = 169, Model = fM4, Car_Id = fM4.Id, Purchase_Date = Convert.ToDateTime("05/01/1996"), Id = 8 },
                 }.AsQueryable();
             }
 
@@ -141,12 +141,12 @@ namespace EY4J5D_HFT_2021221.Test
 
             public Brand Read(int id)
             {
-                throw new NotImplementedException();
+                return ReadAll().First(x => x.Id == id);
             }
 
             public IQueryable<Brand> ReadAll()
             {
-                throw new NotImplementedException();
+                return new List<Brand>(){ new Brand() { BrandName = "Fiat" }, new Brand() { BrandName = "MAN" } }.AsQueryable();
             }
 
             public void Update(Brand updated)
@@ -275,6 +275,30 @@ namespace EY4J5D_HFT_2021221.Test
             var expected = (new KeyValuePair<string, int>("Fiat", 1739));
             //ASSERT
             Assert.That(result.First(), Is.EqualTo(expected));
+        }
+
+
+
+        [Test]
+        public void TestThisYear()
+        {
+            //ACT
+            var result = pl.PurchasedThisYear();
+            var expected = pl.Read(6);
+            //ASSERT
+            Assert.That(result.First().Id, Is.EqualTo(expected.Id));
+        }
+
+
+
+        [Test]
+        public void TestShortBrand()
+        {
+            //ACT
+            var result = bl.ShortBrand();
+            var expected = "MAN";
+            //ASSERT
+            Assert.That(result.First().BrandName, Is.EqualTo(expected));
         }
         //TODO: Test Create Exception handling (e.g. null throws exception)
         //NOTE: 10 Unit tests are required
