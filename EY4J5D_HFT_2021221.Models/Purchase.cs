@@ -13,8 +13,9 @@ namespace EY4J5D_HFT_2021221.Models
         [ForeignKey("Car_Model")]
         public int Car_Id { get; set; }
         [NotMapped]
-        DateTime purchase_date;
+        public DateTime Purchase_Date { get; set; }
         [NotMapped]
+        [Required]
         public int Price { get; set; }
         [NotMapped]
         public virtual Model Model { get; set; }

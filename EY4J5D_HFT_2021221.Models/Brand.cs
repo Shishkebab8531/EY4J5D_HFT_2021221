@@ -9,8 +9,11 @@ namespace EY4J5D_HFT_2021221.Models
     public class Brand
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [NotMapped]
+        [Required]
+        [MaxLength(50)]
         public string BrandName { get; set; }
 
         [NotMapped]

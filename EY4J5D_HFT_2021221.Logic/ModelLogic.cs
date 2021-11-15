@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    class ModelLogic : IModelLogic
+    public class ModelLogic : IModelLogic
     {
         IRepository<Model> modelRepo;
         //ctor
@@ -17,7 +17,14 @@ namespace EY4J5D_HFT_2021221.Logic
         //CRUD
         public void Create(Model newModel)
         {
-            modelRepo.Create(newModel);
+            if (newModel.Model_Name != null && newModel.Model_Name.Length<=50)
+            {
+                modelRepo.Create(newModel);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Delete(int id)
@@ -49,7 +56,7 @@ namespace EY4J5D_HFT_2021221.Logic
         }
         public IEnumerable<KeyValuePair<string, int>> BasicBrand()
         {
-            return (from x in modelRepo.ReadAll() group x by x.Brand.BrandName into g orderby g.Count(*) select new KeyValuePair<string, int>(g.Key, g.Count())).Take(1);
+            return (from x in modelRepo.ReadAll() group x by x.Brand.BrandName into g orderby g.Count() select new KeyValuePair<string, int>(g.Key, g.Count())).Take(1);
         }
     }
 }

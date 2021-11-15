@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    class PurchaseLogic : IPurchaseLogic
+    public class PurchaseLogic : IPurchaseLogic
     {
         IRepository<Purchase> purchaseRepo;
         //ctor

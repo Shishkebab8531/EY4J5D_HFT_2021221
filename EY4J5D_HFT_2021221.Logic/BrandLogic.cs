@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EY4J5D_HFT_2021221.Logic
 {
-    class BrandLogic : IBrandLogic
+    public class BrandLogic : IBrandLogic
     {
         IRepository<Brand> brandRepo;
         //ctor

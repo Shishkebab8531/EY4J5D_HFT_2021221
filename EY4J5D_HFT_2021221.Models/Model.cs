@@ -9,8 +9,11 @@ namespace EY4J5D_HFT_2021221.Models
     public class Model
     {
         [NotMapped]
+        [Required]
+        [MaxLength(50)]
         public string Model_Name { get; set; }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [ForeignKey("Car_Brand")]
         public int Brand_Id { get; set; }
