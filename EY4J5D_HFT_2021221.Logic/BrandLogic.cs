@@ -14,9 +14,16 @@ namespace EY4J5D_HFT_2021221.Logic
             this.brandRepo = brandRepo;
         }
         //CRUD
-        public void Create(Brand newModel)
+        public void Create(Brand newBrand)
         {
-            brandRepo.Create(newModel);
+            if (newBrand.BrandName != null && newBrand.BrandName.Length <= 50 && newBrand.BrandName != "")
+            {
+                brandRepo.Create(newBrand);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Delete(int id)

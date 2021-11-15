@@ -17,7 +17,7 @@ namespace EY4J5D_HFT_2021221.Logic
         //CRUD
         public void Create(Model newModel)
         {
-            if (newModel.Model_Name != null && newModel.Model_Name.Length<=50)
+            if (newModel.Model_Name != null && newModel.Model_Name.Length<=50 && newModel.Model_Name != "")
             {
                 modelRepo.Create(newModel);
             }

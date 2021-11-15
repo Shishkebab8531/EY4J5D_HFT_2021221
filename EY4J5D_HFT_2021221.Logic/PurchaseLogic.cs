@@ -15,9 +15,16 @@ namespace EY4J5D_HFT_2021221.Logic
             this.purchaseRepo = purchaseRepo;
         }
         //CRUD
-        public void Create(Purchase newModel)
+        public void Create(Purchase newPurchase)
         {
-            purchaseRepo.Create(newModel);
+            if (newPurchase.Price >= 0)
+            {
+                purchaseRepo.Create(newPurchase);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public void Delete(int id)

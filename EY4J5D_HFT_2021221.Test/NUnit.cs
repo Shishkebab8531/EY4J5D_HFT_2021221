@@ -13,7 +13,7 @@ namespace EY4J5D_HFT_2021221.Test
     [TestFixture]
     class NUnit
     {
-
+        //Prep Fake Repositories
         class FakeModelRepository : IRepository<Model>
         {
             public void Create(Model input)
@@ -87,7 +87,7 @@ namespace EY4J5D_HFT_2021221.Test
         {
             public void Create(Purchase input)
             {
-                throw new NotImplementedException();
+
             }
 
             public void Delete(int id)
@@ -102,8 +102,8 @@ namespace EY4J5D_HFT_2021221.Test
 
             public IQueryable<Purchase> ReadAll()
             {
-                Brand fakeBrand1 = new Brand() { BrandName = "Opel"};
-                Brand fakeBrand2 = new Brand() { BrandName = "Fiat"};
+                Brand fakeBrand1 = new Brand() { BrandName = "Opel" };
+                Brand fakeBrand2 = new Brand() { BrandName = "Fiat" };
                 Model fM1 = new Model() { Brand = fakeBrand1, Brand_Id = fakeBrand1.Id, Model_Name = "Astra" };
                 Model fM2 = new Model() { Brand = fakeBrand1, Brand_Id = fakeBrand1.Id, Model_Name = "Corsa" };
                 Model fM3 = new Model() { Brand = fakeBrand2, Brand_Id = fakeBrand2.Id, Model_Name = "Multipla" };
@@ -127,18 +127,51 @@ namespace EY4J5D_HFT_2021221.Test
                 throw new NotImplementedException();
             }
         }
+        class FakeBrandRepository : IRepository<Brand>
+        {
+            public void Create(Brand input)
+            {
+
+            }
+
+            public void Delete(int id)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Brand Read(int id)
+            {
+                throw new NotImplementedException();
+            }
+
+            public IQueryable<Brand> ReadAll()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Update(Brand updated)
+            {
+                throw new NotImplementedException();
+            }
+        }
         ModelLogic ml;
         PurchaseLogic pl;
+        BrandLogic bl;
         public NUnit()
         {
             ml = new ModelLogic(new FakeModelRepository());
             pl = new PurchaseLogic(new FakePurchaseRepository());
+            bl = new BrandLogic(new FakeBrandRepository());
         }
-        //TODO: Test Non-CRUD methods
+
+
+        
+        //Create Tests
         [TestCase(null, false)]
         [TestCase("123456789012345678901234567890123456789012345678901234567890", false)]
-        [TestCase("", true)]
-        public void TestCreate(string modelName, bool result)
+        [TestCase("", false)]
+        [TestCase("Yes", true)]
+        public void TestCreateModel(string modelName, bool result)
         {
             if (result)
             {
@@ -147,6 +180,40 @@ namespace EY4J5D_HFT_2021221.Test
             else
             {
                 Assert.That(() => ml.Create(new Model() { Model_Name = modelName, Brand_Id = 69 }), Throws.Exception);
+            }
+        }
+
+
+
+        [TestCase(null, false)]
+        [TestCase("123456789012345678901234567890123456789012345678901234567890", false)]
+        [TestCase("", false)]
+        [TestCase("Yes", true)]
+        public void TestCreateBrand(string BrandName, bool result)
+        {
+            if (result)
+            {
+                Assert.That(() => bl.Create(new Brand() { BrandName = BrandName }), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => bl.Create(new Brand() { BrandName = BrandName }), Throws.Exception);
+            }
+        }
+
+
+
+        [TestCase(-1, false)]
+        [TestCase(69, true)]
+        public void TestCreatePurchase(int priceIn, bool result)
+        {
+            if (result)
+            {
+                Assert.That(() => pl.Create(new Purchase() { Price = priceIn }), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => pl.Create(new Purchase() { Price = priceIn }), Throws.Exception);
             }
         }
 
@@ -161,6 +228,9 @@ namespace EY4J5D_HFT_2021221.Test
             //ASSERT
             Assert.That(result.First, Is.EqualTo(expected));
         }
+
+
+
         [Test]
         public void TestBasicBrand()
         {
@@ -170,6 +240,9 @@ namespace EY4J5D_HFT_2021221.Test
             //ASSERT
             Assert.That(result.First, Is.EqualTo(expected));
         }
+
+
+
         [Test]
         public void TestExpensiveCar()
         {
@@ -179,6 +252,9 @@ namespace EY4J5D_HFT_2021221.Test
             //ASSERT
             Assert.That(result.First(), Is.EqualTo(expected));
         }
+
+
+
         [Test]
         public void TestPopularCar()
         {
@@ -188,6 +264,9 @@ namespace EY4J5D_HFT_2021221.Test
             //ASSERT
             Assert.That(result.First(), Is.EqualTo(expected));
         }
+
+
+
         [Test]
         public void TestRichBrand()
         {
