@@ -66,7 +66,7 @@ namespace EY4J5D_HFT_2021221.Logic
         public IEnumerable<KeyValuePair<string, int>> RichBrand()
         {
             return (from x in purchaseRepo.ReadAll() 
-                    group x by x.Model.Brand.BrandName into g 
+                    group x by x.Model.Brand.Brand_Name into g 
                     orderby g.Sum(x => x.Price) descending 
                     select new KeyValuePair<string, int>
                     (g.Key, g.Sum(x => x.Price))).Take(1);
@@ -74,7 +74,7 @@ namespace EY4J5D_HFT_2021221.Logic
         public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCarPerBrand()
         {
             return (from x in purchaseRepo.ReadAll()
-                    group x by x.Model.Brand.BrandName into g
+                    group x by x.Model.Brand.Brand_Name into g
                     orderby g.Average(x => x.Price) descending
                     select new KeyValuePair<string, double>
                     (g.Key, g.Average(x => x.Price)));

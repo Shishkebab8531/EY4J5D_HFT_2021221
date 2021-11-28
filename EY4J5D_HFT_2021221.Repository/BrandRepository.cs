@@ -31,7 +31,7 @@ namespace EY4J5D_HFT_20211221.Repository
         public void Update(Brand updated)
         {
            var oldBrand = Read(updated.Id);
-            oldBrand.BrandName = updated.BrandName;
+            oldBrand.Brand_Name = updated.Brand_Name;
             oldBrand.Id = updated.Id;
             oldBrand.Models = updated.Models;
             ctx.SaveChanges();

@@ -1,24 +1,27 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EY4J5D_HFT_2021221.Models
 {
-    [Table("Car")]
+    [Table("Models")]
     public class Model
     {
-        [NotMapped]
         [Required]
         [MaxLength(50)]
         public string Model_Name { get; set; }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [ForeignKey("Car_Brand")]
+        [ForeignKey("Brands")]
         public int Brand_Id { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<Purchase> Purchases { get; set; }
+        [NotMapped]
+        [JsonIgnore]
         public virtual Brand Brand { get; set; }
         
     }

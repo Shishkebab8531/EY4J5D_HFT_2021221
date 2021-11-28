@@ -45,7 +45,7 @@ namespace EY4J5D_HFT_20211221.Repository
         public void Update(Purchase updated)
         {
             var oldPurchase = Read(updated.Id);
-            oldPurchase.Car_Id = updated.Car_Id;
+            oldPurchase.Model_Id = updated.Model_Id;
             oldPurchase.Model = updated.Model;
             oldPurchase.Price = updated.Price;
             ctx.SaveChanges();

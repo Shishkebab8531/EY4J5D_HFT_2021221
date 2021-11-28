@@ -17,7 +17,7 @@ namespace EY4J5D_HFT_2021221.Logic
         //CRUD
         public void Create(Brand newBrand)
         {
-            if (newBrand.BrandName != null && newBrand.BrandName.Length <= 50 && newBrand.BrandName != "")
+            if (newBrand.Brand_Name != null && newBrand.Brand_Name.Length <= 50 && newBrand.Brand_Name != "")
             {
                 brandRepo.Create(newBrand);
             }
@@ -49,7 +49,7 @@ namespace EY4J5D_HFT_2021221.Logic
         //Non-CRUD
         public IEnumerable<Brand> ShortBrand()
         {
-            return (from x in brandRepo.ReadAll() where x.BrandName.Length < 4 select x);
+            return (from x in brandRepo.ReadAll() where x.Brand_Name.Length < 4 select x);
         }
     }
 }

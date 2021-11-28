@@ -22,4 +22,6 @@
     <ProjectReference Include="..\EY4J5D_HFT_2021221.Repository\EY4J5D_HFT_2021221.Repository.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

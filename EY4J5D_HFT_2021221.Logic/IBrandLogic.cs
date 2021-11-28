@@ -11,5 +11,6 @@ namespace EY4J5D_HFT_2021221.Logic
         public IEnumerable<Brand> ReadAll();
         public void Update(Brand updated);
         public void Delete(int id);
+        public IEnumerable<Brand> ShortBrand();
     }
 }

@@ -14,49 +14,92 @@ namespace EY4J5D_HFT_2021221.Data
         {
             Database.EnsureCreated();
         }
-        public void OnModelCreating(DbContextOptionsBuilder optionsBuilder)
+        public CarDbContext(DbContextOptions options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if(!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseLazyLoadingProxies().UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CarDb.mdf;Integrated Security=True");
+                optionsBuilder
+                    .UseLazyLoadingProxies()
+                    .UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CarDb.mdf;Integrated Security=True");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Model>(entity => entity.HasOne(model => model.Brand).WithMany(brand => brand.Models).HasForeignKey(model => model.Brand_Id).OnDelete(DeleteBehavior.ClientSetNull));
-            modelBuilder.Entity<Model>(entity => entity.HasMany(model => model.Purchases).WithOne(purchase => purchase.Model).HasForeignKey(purchase => purchase.Model).OnDelete(DeleteBehavior.Cascade));
+            modelBuilder.Entity<Model>(entity => entity.HasMany(model => model.Purchases).WithOne(purchase => purchase.Model).HasForeignKey(purchase => purchase.Model_Id).OnDelete(DeleteBehavior.Cascade));
+            
 
             // -------------------------------------------------------------------------------------------------------
 
-            Model c0 = new Model() { Brand_Id = 1, Id = 1, Model_Name = "Multipla" };
-            Model c1 = new Model() { Brand_Id = 2, Id = 2, Model_Name = "Civic" };
-            Model c2 = new Model() { Brand_Id = 3, Id = 3, Model_Name = "Slingshot" };
+            Model m0 = new Model() 
+            { 
+                Model_Name = "Multipla",
+                Brand_Id = 1, 
+                Id = 1,  
+            };
+            Model m1 = new Model() 
+            {
+                Model_Name = "Civic",
+                Brand_Id = 2, 
+                Id = 2 
+            };
+            Model m2 = new Model() 
+            { 
+                Model_Name = "Slingshot",
+                Brand_Id = 3, 
+                Id = 3 
+            };
 
             // -------------------------------------------------------------------------------------------------------
 
-            Brand b0 = new Brand() { Id = 1, BrandName = "Fiat" };
-            Brand b1 = new Brand() { Id = 2, BrandName = "Honda" };
-            Brand b2 = new Brand() { Id = 3, BrandName = "Polaris" };
+            Brand b0 = new Brand() 
+            {
+                Id = 1,
+                Brand_Name = "Fiat" 
+            };
+            Brand b1 = new Brand() 
+            {
+                Id = 2,
+                Brand_Name = "Honda" 
+            };
+            Brand b2 = new Brand() 
+            {
+                Id = 3,
+                Brand_Name = "Polaris" 
+            };
 
             // -------------------------------------------------------------------------------------------------------
 
-            Purchase p0 = new Purchase() { Id = 1, Car_Id = 1, Price = 69 };
-            Purchase p1 = new Purchase() { Id = 2, Car_Id = 2, Price = 69420 };
-            Purchase p2 = new Purchase() { Id = 3, Car_Id = 3, Price = 1337 };
-
-            // -------------------------------------------------------------------------------------------------------
-
-            b0.Id = c0.Brand_Id;
-            b1.Id = c1.Brand_Id;
-            b2.Id = c2.Brand_Id;
-            c0.Id = p0.Car_Id;
-            c1.Id = p1.Car_Id;
-            c2.Id = p2.Car_Id;
+            Purchase p0 = new Purchase()
+            {
+                Id = 1,
+                Model_Id = 1,
+                Price = 69,
+                Purchase_Date = Convert.ToDateTime("06/09/1969")
+            };
+            Purchase p1 = new Purchase() 
+            {
+                Id = 2,
+                Model_Id = 2,
+                Price = 69420,
+                Purchase_Date = Convert.ToDateTime("06/02/1981")
+            };
+            Purchase p2 = new Purchase() 
+            {
+                Id = 3,
+                Model_Id = 3,
+                Price = 133,
+                Purchase_Date = Convert.ToDateTime("09/11/2001")
+            };
 
             //-------------------------------------------------------------------------------------------------------
 
+            modelBuilder.Entity<Model>().HasData(m0, m1, m2);
             modelBuilder.Entity<Brand>().HasData(b0, b1, b2);
-            modelBuilder.Entity<Model>().HasData(c0, c1, c2);
             modelBuilder.Entity<Purchase>().HasData(p0, p1, p2);
         }
     }
