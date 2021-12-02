@@ -49,7 +49,9 @@ namespace EY4J5D_HFT_2021221.Logic
         //Non-CRUD
         public IEnumerable<Brand> ShortBrand()
         {
-            return (from x in brandRepo.ReadAll() where x.Brand_Name.Length < 4 select x);
+            //var output = (from x in brandRepo.ReadAll() where x.Brand_Name.Length <= 4 select x);
+            var output = brandRepo.ReadAll().Where(x => x.Brand_Name.Length <= 4).ToList();
+            return output.AsEnumerable();
         }
     }
 }

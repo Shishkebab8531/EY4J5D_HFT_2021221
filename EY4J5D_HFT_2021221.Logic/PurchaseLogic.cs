@@ -65,23 +65,25 @@ namespace EY4J5D_HFT_2021221.Logic
         }
         public IEnumerable<KeyValuePair<string, int>> RichBrand()
         {
-            return (from x in purchaseRepo.ReadAll() 
-                    group x by x.Model.Brand.Brand_Name into g 
-                    orderby g.Sum(x => x.Price) descending 
+            return (from x in purchaseRepo.ReadAll()
+                    group x by x.Model.Brand.Brand_Name into g
+                    orderby g.Sum(x => x.Price) descending
                     select new KeyValuePair<string, int>
                     (g.Key, g.Sum(x => x.Price))).Take(1);
         }
-        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCarPerBrand()
+        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCar()
         {
-            return (from x in purchaseRepo.ReadAll()
-                    group x by x.Model.Brand.Brand_Name into g
-                    orderby g.Average(x => x.Price) descending
-                    select new KeyValuePair<string, double>
-                    (g.Key, g.Average(x => x.Price)));
+            var output = from x in purchaseRepo.ReadAll()
+                          group x by x.Model.Model_Name into g
+                          select new KeyValuePair<string, double>
+                          (g.Key, g.Average(x => x.Price));
+            return output;
         }
         public IEnumerable<Purchase> PurchasedThisYear()
         {
-            return (from x in purchaseRepo.ReadAll() where x.Purchase_Date.Year == DateTime.Now.Year select x);
+            //var output = (from x in purchaseRepo.ReadAll() where x.Purchase_Date.Year == DateTime.Now.Year select x);
+            var output = purchaseRepo.ReadAll().Where(x => x.Purchase_Date.Year == DateTime.Now.Year);
+            return output;
         }
     }
 }

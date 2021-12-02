@@ -12,7 +12,7 @@ namespace EY4J5D_HFT_2021221.Logic
         public void Update(Model updated);
         public void Delete(int id);
         public IEnumerable<KeyValuePair<string, int>> BrandsByModels();
-        public IEnumerable<KeyValuePair<string, int>> BasicBrand();
+        public IEnumerable<KeyValuePair<string, int>> BasicBrands();
 
     }
 }

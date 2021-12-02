@@ -17,7 +17,6 @@ namespace EY4J5D_HFT_2021221.Models
         [Required]
         public int Price { get; set; }
         [NotMapped]
-        [JsonIgnore]
         public virtual Model Model { get; set; }
     }
 }

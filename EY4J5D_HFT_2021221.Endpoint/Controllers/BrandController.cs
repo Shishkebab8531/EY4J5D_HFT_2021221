@@ -53,13 +53,5 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
         {
             bl.Delete(id);
         }
-        /*
-        // GET /brand/stat/shortBrand
-        [HttpGet]
-        public IEnumerable<Brand> ShortBrand()
-        {
-            return bl.ShortBrand();
-        }
-        */
     }
 }

@@ -47,11 +47,23 @@ namespace EY4J5D_HFT_2021221.Data
                 Brand_Id = 2, 
                 Id = 2 
             };
-            Model m2 = new Model() 
-            { 
+            Model m2 = new Model()
+            {
                 Model_Name = "Slingshot",
-                Brand_Id = 3, 
-                Id = 3 
+                Brand_Id = 3,
+                Id = 3
+            };
+            Model m3 = new Model()
+            {
+                Model_Name = "Astra",
+                Brand_Id = 4,
+                Id = 4
+            };
+            Model m4 = new Model()
+            {
+                Model_Name = "Corsa",
+                Brand_Id = 4,
+                Id = 5
             };
 
             // -------------------------------------------------------------------------------------------------------
@@ -66,10 +78,15 @@ namespace EY4J5D_HFT_2021221.Data
                 Id = 2,
                 Brand_Name = "Honda" 
             };
-            Brand b2 = new Brand() 
+            Brand b2 = new Brand()
             {
                 Id = 3,
-                Brand_Name = "Polaris" 
+                Brand_Name = "Polaris"
+            };
+            Brand b3 = new Brand()
+            {
+                Id = 4,
+                Brand_Name = "Opel"
             };
 
             // -------------------------------------------------------------------------------------------------------
@@ -88,19 +105,26 @@ namespace EY4J5D_HFT_2021221.Data
                 Price = 69420,
                 Purchase_Date = Convert.ToDateTime("06/02/1981")
             };
-            Purchase p2 = new Purchase() 
+            Purchase p2 = new Purchase()
             {
                 Id = 3,
                 Model_Id = 3,
                 Price = 133,
                 Purchase_Date = Convert.ToDateTime("09/11/2001")
             };
+            Purchase p3 = new Purchase()
+            {
+                Id = 4,
+                Model_Id = 3,
+                Price = 123,
+                Purchase_Date = Convert.ToDateTime("09/11/2021")
+            };
 
             //-------------------------------------------------------------------------------------------------------
 
-            modelBuilder.Entity<Model>().HasData(m0, m1, m2);
-            modelBuilder.Entity<Brand>().HasData(b0, b1, b2);
-            modelBuilder.Entity<Purchase>().HasData(p0, p1, p2);
+            modelBuilder.Entity<Model>().HasData(m0, m1, m2, m3, m4);
+            modelBuilder.Entity<Brand>().HasData(b0, b1, b2, b3);
+            modelBuilder.Entity<Purchase>().HasData(p0, p1, p2, p3);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace EY4J5D_HFT_2021221.Logic
         public IEnumerable<KeyValuePair<string, int>> PopularCar();
         public IEnumerable<KeyValuePair<string, int>> ExpensiveCar();
         public IEnumerable<KeyValuePair<string, int>> RichBrand();
-        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCarPerBrand();
+        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCar();
         public IEnumerable<Purchase> PurchasedThisYear();
     }
 }

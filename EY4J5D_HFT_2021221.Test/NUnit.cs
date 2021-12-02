@@ -35,7 +35,7 @@ namespace EY4J5D_HFT_2021221.Test
             {
                 Brand fakeBrand1 = new Brand()
                 {
-                    Brand_Name = "Fiat",
+                    Brand_Name = "Fiatt",
                     Id = 69
 
                 };
@@ -102,8 +102,8 @@ namespace EY4J5D_HFT_2021221.Test
 
             public IQueryable<Purchase> ReadAll()
             {
-                Brand fakeBrand1 = new Brand() { Brand_Name = "Opel" };
-                Brand fakeBrand2 = new Brand() { Brand_Name = "Fiat" };
+                Brand fakeBrand1 = new Brand() { Brand_Name = "Opell" };
+                Brand fakeBrand2 = new Brand() { Brand_Name = "Fiatt" };
                 Model fM1 = new Model() { Brand = fakeBrand1, Brand_Id = fakeBrand1.Id, Model_Name = "Astra" };
                 Model fM2 = new Model() { Brand = fakeBrand1, Brand_Id = fakeBrand1.Id, Model_Name = "Corsa" };
                 Model fM3 = new Model() { Brand = fakeBrand2, Brand_Id = fakeBrand2.Id, Model_Name = "Multipla" };
@@ -146,7 +146,7 @@ namespace EY4J5D_HFT_2021221.Test
 
             public IQueryable<Brand> ReadAll()
             {
-                return new List<Brand>(){ new Brand() { Brand_Name = "Fiat" }, new Brand() { Brand_Name = "MAN" } }.AsQueryable();
+                return new List<Brand>(){ new Brand() { Brand_Name = "Fiatt" }, new Brand() { Brand_Name = "MAN" } }.AsQueryable();
             }
 
             public void Update(Brand updated)
@@ -224,7 +224,7 @@ namespace EY4J5D_HFT_2021221.Test
         {
             //ACT
             var result = ml.BrandsByModels();
-            var expected = (new KeyValuePair<string, int>("Fiat", 3));
+            var expected = (new KeyValuePair<string, int>("Fiatt", 3));
             //ASSERT
             Assert.That(result.First, Is.EqualTo(expected));
         }
@@ -235,7 +235,7 @@ namespace EY4J5D_HFT_2021221.Test
         public void TestBasicBrand()
         {
             //ACT
-            var result = ml.BasicBrand();
+            var result = ml.BasicBrands();
             var expected = (new KeyValuePair<string, int>("Slingshot", 1));
             //ASSERT
             Assert.That(result.First, Is.EqualTo(expected));
@@ -272,7 +272,7 @@ namespace EY4J5D_HFT_2021221.Test
         {
             //ACT
             var result = pl.RichBrand();
-            var expected = (new KeyValuePair<string, int>("Fiat", 1739));
+            var expected = (new KeyValuePair<string, int>("Fiatt", 1739));
             //ASSERT
             Assert.That(result.First(), Is.EqualTo(expected));
         }

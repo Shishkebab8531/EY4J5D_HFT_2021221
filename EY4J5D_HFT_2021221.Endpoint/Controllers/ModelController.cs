@@ -53,19 +53,5 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
         {
             ml.Delete(id);
         }
-        /*
-        //GET /stat/brandsByModels
-        [HttpGet("model/stat/brandsByModels")]
-        public IEnumerable<KeyValuePair<string, int>> BrandsByModels()
-        {
-            return ml.BrandsByModels();
-        }
-        //GET /stat/basicBrand
-        [HttpGet("model/stat/basicBrand")]
-        public IEnumerable<KeyValuePair<string, int>> BasicBrand()
-        {
-            return ml.BasicBrand();
-        }
-        */
     }
 }

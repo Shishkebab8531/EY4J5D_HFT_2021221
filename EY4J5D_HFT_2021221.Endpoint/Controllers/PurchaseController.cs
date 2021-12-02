@@ -53,37 +53,5 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
         {
             pl.Delete(id);
         }
-        /*
-        //GET /stat/popularCar
-        [HttpGet("stat/popularCar")]
-        public IEnumerable<KeyValuePair<string, int>> PopularCar()
-        {
-            return pl.PopularCar();
-        }
-        //GET /stat/expensiveCar
-        [HttpGet("stat/expensiveCar")]
-        public IEnumerable<KeyValuePair<string, int>> ExpensiveCar()
-        {
-            return pl.ExpensiveCar();
-        }
-        //GET /stat/richBrand
-        [HttpGet("stat/richBrand")]
-        public IEnumerable<KeyValuePair<string, int>> RichBrand()
-        {
-            return pl.RichBrand();
-        }
-        //GET /stat/averageMoneyPerCarPerBrand
-        [HttpGet("stat/averageMoneyPerCarPerBrand")]
-        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCarPerBrand()
-        {
-            return pl.AverageMoneyPerCarPerBrand();
-        }
-        //GET /stat/purchasedThisYear
-        [HttpGet("stat/purchasedThisYear")]
-        public IEnumerable<Purchase> PurchasedThisYear()
-        {
-            return pl.PurchasedThisYear();
-        }
-        */
     }
 }

@@ -21,10 +21,23 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
         {
             this.ml = ml;this.bl = bl;this.pl = pl;
         }
+        //GET /stat/shortBrand
         [HttpGet("shortBrand")]
         public IEnumerable<Brand> ShortBrand()
         {
             return bl.ShortBrand();
+        }
+        //GET /stat/purchasedThisYear
+        [HttpGet("purchasedThisYear")]
+        public IEnumerable<Purchase> PurchasedThisYear()
+        {
+            return pl.PurchasedThisYear();
+        }
+        //GET /stat/averageMoneyPerCarPerBrand
+        [HttpGet("averageMoneyPerCar")]
+        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCar()
+        {
+            return pl.AverageMoneyPerCar();
         }
         //GET /stat/popularCar
         [HttpGet("popularCar")]
@@ -44,18 +57,6 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
         {
             return pl.RichBrand();
         }
-        //GET /stat/averageMoneyPerCarPerBrand
-        [HttpGet("averageMoneyPerCarPerBrand")]
-        public IEnumerable<KeyValuePair<string, double>> AverageMoneyPerCarPerBrand()
-        {
-            return pl.AverageMoneyPerCarPerBrand();
-        }
-        //GET /stat/purchasedThisYear
-        [HttpGet("purchasedThisYear")]
-        public IEnumerable<Purchase> PurchasedThisYear()
-        {
-            return pl.PurchasedThisYear();
-        }
         //GET /stat/brandsByModels
         [HttpGet("brandsByModels")]
         public IEnumerable<KeyValuePair<string, int>> BrandsByModels()
@@ -63,10 +64,10 @@ namespace EY4J5D_HFT_2021221.Endpoint.Controllers
             return ml.BrandsByModels();
         }
         //GET /stat/basicBrand
-        [HttpGet("basicBrand")]
-        public IEnumerable<KeyValuePair<string, int>> BasicBrand()
+        [HttpGet("basicBrands")]
+        public IEnumerable<KeyValuePair<string, int>> BasicBrands()
         {
-            return ml.BasicBrand();
+            return ml.BasicBrands();
         }
     }
 }
