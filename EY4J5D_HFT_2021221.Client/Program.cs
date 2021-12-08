@@ -12,20 +12,24 @@ namespace EY4J5D_HFT_20211221.Client
         {
             System.Threading.Thread.Sleep(8000);
             RestService rest = new RestService("http://localhost:3445");
+            Brand testBrand = new Brand()
+            {
+                Brand_Name = "Lada",
+                Models = new List<Model>()
+            };
             Model testModel = new Model()
             {
                 Model_Name = "Niva",
-                Purchases = new List<Purchase>()
+                Purchases = new List<Purchase>(),
+                Brand = testBrand,
+                Brand_Id = testBrand.Id
             };
             Purchase testPurchase = new Purchase()
             {
                 Purchase_Date = DateTime.Now,
-                Price = 123
-            };
-            Brand testBrand = new Brand()
-            {
-                Brand_Name = "Lada", 
-                Models = new List<Model>()
+                Price = 123,
+                Model = testModel,
+                Model_Id = testModel.Id
             };
             var model_crud = new ConsoleMenu(args, level: 1)
                 .Add

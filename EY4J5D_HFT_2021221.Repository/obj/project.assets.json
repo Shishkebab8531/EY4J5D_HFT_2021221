@@ -7464,11 +7464,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
       "projectName": "EY4J5D_HFT_2021221.Repository",
-      "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
+      "projectPath": "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
       "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\obj\\",
+      "outputPath": "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7485,11 +7485,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Data\\EY4J5D_HFT_2021221.Data.csproj": {
-              "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Data\\EY4J5D_HFT_2021221.Data.csproj"
+            "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Data\\EY4J5D_HFT_2021221.Data.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Data\\EY4J5D_HFT_2021221.Data.csproj"
             },
-            "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
-              "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj"
+            "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Source\\Repos\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj"
             }
           }
         }
