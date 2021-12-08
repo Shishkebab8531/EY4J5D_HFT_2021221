@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4SGB/L5HUinu974sceYcMnWcykhdPDAhhBZyG/8REpmRcCobVw16VixGwo74H7URdrvT7464H8wK+QvAqQU9yQ==",
+  "dgSpecHash": "TDWx1zGpSak7ejjnoBmVcnHviotJbCUEYP7gu2qPYFvCx3+7fufMAPGv9ZkSfMopL5+vhQq/yjtEQsSQACwMBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Logic\\EY4J5D_HFT_2021221.Logic.csproj",
+  "projectFilePath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Logic\\EY4J5D_HFT_2021221.Logic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karesz\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Karesz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

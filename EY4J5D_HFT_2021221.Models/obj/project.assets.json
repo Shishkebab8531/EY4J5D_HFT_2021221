@@ -7421,11 +7421,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
       "projectName": "EY4J5D_HFT_2021221.Models",
-      "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
+      "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
       "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\obj\\",
+      "outputPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",

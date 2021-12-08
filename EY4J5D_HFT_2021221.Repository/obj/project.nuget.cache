@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K++jVXWXNn/KZn+umBx1eDk5rjRiRIEMXqNiw0bqTo/T8qaPrTE2Bx5f3BlbT9hU0iePuiCTt8zV7n5l2njA1Q==",
+  "dgSpecHash": "qvfReL5FtbbfrgyFrf/uuT+bbLdCzPNtpFRNeduq+E+iqa8rt9fUAXCn5yySwoInhS84Zyqs1M9QTj5mISq2dQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Repository\\EY4J5D_HFT_2021221.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karesz\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Karesz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -55,6 +55,7 @@ namespace EY4J5D_HFT_2021221.Logic
                          (g.Key.Brand_Name, g.Count());
             return output;*/
             return (from x in modelRepo.ReadAll() group x by x.Brand.Brand_Name into g orderby g.Count() select new KeyValuePair<string, int>(g.Key, g.Count()));
+
         }
         public IEnumerable<KeyValuePair<string, int>> BasicBrands()
         {

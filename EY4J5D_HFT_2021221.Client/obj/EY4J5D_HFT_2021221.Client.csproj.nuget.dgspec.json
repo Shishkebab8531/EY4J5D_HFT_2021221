@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj": {}
+    "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj": {
+    "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
         "projectName": "EY4J5D_HFT_2021221.Client",
-        "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
+        "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
         "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\obj\\",
+        "outputPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
-                "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj"
+              "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
+                "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
+    "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
         "projectName": "EY4J5D_HFT_2021221.Models",
-        "projectPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
+        "projectPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\EY4J5D_HFT_2021221.Models.csproj",
         "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\obj\\",
+        "outputPath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",

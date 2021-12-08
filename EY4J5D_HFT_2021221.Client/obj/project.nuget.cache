@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sDMRIwJOjPX6eVu8tsqR65MJv+K/+y9TiVFHP+N36GruOPP5Roz6J9+GSXde19x6yAD8s2hP7XRciLbVMv1ecA==",
+  "dgSpecHash": "IogyP3mr+QF3/sSWa/1psVJvSUWmc4lh2cX+XLOw2TNXDAfWNUevS65WYMIq/OCHZiPVW5lBZlBFo/NFyloXeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karesz\\Documents\\git\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
+  "projectFilePath": "C:\\Users\\Karesz\\Desktop\\Kebab Dox\\EY4J5D_HFT_2021221\\EY4J5D_HFT_2021221.Client\\EY4J5D_HFT_2021221.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karesz\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Karesz\\.nuget\\packages\\consolemenu-simple\\2.4.1\\consolemenu-simple.2.4.1.nupkg.sha512",
