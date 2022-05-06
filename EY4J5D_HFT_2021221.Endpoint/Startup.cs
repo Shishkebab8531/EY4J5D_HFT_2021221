@@ -1,5 +1,6 @@
 using EY4J5D_HFT_20211221.Repository;
 using EY4J5D_HFT_2021221.Data;
+using EY4J5D_HFT_2021221.Endpoint.Services;
 using EY4J5D_HFT_2021221.Logic;
 using EY4J5D_HFT_2021221.Models;
 using EY4J5D_HFT_2021221.Repository;
@@ -21,6 +22,8 @@ namespace EY4J5D_HFT_20211221.Endpoint
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR();
+
             services.AddControllers();
             services.AddTransient<IModelLogic, ModelLogic>();
             services.AddTransient<IBrandLogic, BrandLogic>();
@@ -40,12 +43,17 @@ namespace EY4J5D_HFT_20211221.Endpoint
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(x => x
+                .AllowCredentials()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:4859"));
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }

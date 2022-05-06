@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EY4J5D_HFT_2021221.Models;
 using System;
+using System.Collections.Generic;
 
 namespace EY4J5D_HFT_2021221.Data
 {
@@ -20,7 +21,7 @@ namespace EY4J5D_HFT_2021221.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if(!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
                     .UseLazyLoadingProxies()
@@ -31,52 +32,18 @@ namespace EY4J5D_HFT_2021221.Data
         {
             modelBuilder.Entity<Model>(entity => entity.HasOne(model => model.Brand).WithMany(brand => brand.Models).HasForeignKey(model => model.Brand_Id).OnDelete(DeleteBehavior.ClientSetNull));
             modelBuilder.Entity<Model>(entity => entity.HasMany(model => model.Purchases).WithOne(purchase => purchase.Model).HasForeignKey(purchase => purchase.Model_Id).OnDelete(DeleteBehavior.Cascade));
-            
 
             // -------------------------------------------------------------------------------------------------------
 
-            Model m0 = new Model() 
-            { 
-                Model_Name = "Multipla",
-                Brand_Id = 1, 
-                Id = 1,  
-            };
-            Model m1 = new Model() 
-            {
-                Model_Name = "Civic",
-                Brand_Id = 2, 
-                Id = 2 
-            };
-            Model m2 = new Model()
-            {
-                Model_Name = "Slingshot",
-                Brand_Id = 3,
-                Id = 3
-            };
-            Model m3 = new Model()
-            {
-                Model_Name = "Astra",
-                Brand_Id = 4,
-                Id = 4
-            };
-            Model m4 = new Model()
-            {
-                Model_Name = "Corsa",
-                Brand_Id = 4,
-                Id = 5
-            };
-
-            // -------------------------------------------------------------------------------------------------------
-
-            Brand b0 = new Brand() 
+            Brand b0 = new Brand()
             {
                 Id = 1,
-                Brand_Name = "Fiat" 
+                Brand_Name = "Fiat"
             };
-            Brand b1 = new Brand() 
+            Brand b1 = new Brand()
             {
                 Id = 2,
-                Brand_Name = "Honda" 
+                Brand_Name = "Honda"
             };
             Brand b2 = new Brand()
             {
@@ -98,7 +65,7 @@ namespace EY4J5D_HFT_2021221.Data
                 Price = 69,
                 Purchase_Date = Convert.ToDateTime("06/09/1969")
             };
-            Purchase p1 = new Purchase() 
+            Purchase p1 = new Purchase()
             {
                 Id = 2,
                 Model_Id = 2,
@@ -118,6 +85,39 @@ namespace EY4J5D_HFT_2021221.Data
                 Model_Id = 3,
                 Price = 123,
                 Purchase_Date = Convert.ToDateTime("09/11/2021")
+            };
+
+            // -------------------------------------------------------------------------------------------------------
+
+            Model m0 = new Model()
+            {
+                Model_Name = "Multipla",
+                Brand_Id = 1,
+                Id = 1
+            };
+            Model m1 = new Model()
+            {
+                Model_Name = "Civic",
+                Brand_Id = 2,
+                Id = 2
+            };
+            Model m2 = new Model()
+            {
+                Model_Name = "Slingshot",
+                Brand_Id = 3,
+                Id = 3
+            };
+            Model m3 = new Model()
+            {
+                Model_Name = "Astra",
+                Brand_Id = 4,
+                Id = 4
+            };
+            Model m4 = new Model()
+            {
+                Model_Name = "Corsa",
+                Brand_Id = 4,
+                Id = 5
             };
 
             //-------------------------------------------------------------------------------------------------------
