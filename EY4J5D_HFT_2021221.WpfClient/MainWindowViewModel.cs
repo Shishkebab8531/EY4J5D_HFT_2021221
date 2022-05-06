@@ -86,7 +86,7 @@ namespace EY4J5D_HFT_2021221.WpfClient
                         Model = value.Model != null ? value.Model : new Model() , 
                         Model_Id = value.Model_Id, 
                         Price = value.Price,
-                        Purchase_Date = value.Purchase_Date != null ? value.Purchase_Date : DateTime.Now
+                        Purchase_Date = value.Purchase_Date
                     };
                 }
                 OnPropertyChanged();

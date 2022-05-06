@@ -33,7 +33,7 @@ namespace EY4J5D_HFT_20211221.Repository
            var oldBrand = Read(updated.Id);
             oldBrand.Brand_Name = updated.Brand_Name;
             oldBrand.Id = updated.Id;
-            oldBrand.Models = updated.Models;
+            //oldBrand.Models = updated.Models;
             ctx.SaveChanges();
         }
 

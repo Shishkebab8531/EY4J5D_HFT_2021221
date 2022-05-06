@@ -31,10 +31,10 @@ namespace EY4J5D_HFT_20211221.Repository
         public void Update(Model updated)
         {
             var oldModel = Read(updated.Id);
-            oldModel.Brand = updated.Brand;
+            //oldModel.Brand = updated.Brand;
             oldModel.Brand_Id = updated.Brand_Id;
             oldModel.Model_Name = updated.Model_Name;
-            oldModel.Purchases = updated.Purchases;
+            //oldModel.Purchases = updated.Purchases;
             ctx.SaveChanges();
         }
         public void Delete(int id)

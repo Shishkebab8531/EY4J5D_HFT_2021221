@@ -45,8 +45,9 @@ namespace EY4J5D_HFT_20211221.Repository
         public void Update(Purchase updated)
         {
             var oldPurchase = Read(updated.Id);
+            oldPurchase.Purchase_Date = updated.Purchase_Date;
             oldPurchase.Model_Id = updated.Model_Id;
-            oldPurchase.Model = updated.Model;
+            //oldPurchase.Model = updated.Model;
             oldPurchase.Price = updated.Price;
             ctx.SaveChanges();
         }
